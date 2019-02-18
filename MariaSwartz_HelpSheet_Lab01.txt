@@ -1,0 +1,14 @@
+\\<Maria Swartz>_HelpSheet.txt
+\\Lab01
+\\Feb 18 2019
+
+Lab 00:
+1. To comment things out in C++ use "//" for a single line and "/*" and "*/" for a block of code
+2. To comment things out in Python use "#"
+3. A mark down file has a .md extension
+
+Lab 01:
+1. With an array ARRAY, you can use ARRAY.find_last_not_of(whitespace) to strip the last character from the string you are inputing.
+I found that this also takes away the last character, so it is more beneficial to use (ARRAY.find_last_not_of(whitespace) + 1) to 
+strip the final whitespace.
+
