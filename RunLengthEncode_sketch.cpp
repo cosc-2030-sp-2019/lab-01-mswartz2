@@ -1,5 +1,7 @@
 ﻿// RunLengthEncode.cpp : Defines the entry point for the console application.
-//
+//Maria Swartz
+//Lab01
+//Feb 18 2019
 
 #include "stdafx.h"
 // CPP program to implement run length encoding
@@ -35,14 +37,15 @@ int main()
 	// Go through list, testing whether next pixel is the same.
 	for (i = 0; i < n; i++)
 	{
-		if (pix_list[i + 1] != pix_list[i + 1])
-			pixf_cmpr << pix_list[i];
+		if (pix_list[i] != pix_list[i + 1])
+			pixf_cmpr << pix_list[i] << "\n";
 		else
 		{
 			// Pixels same.
 			// 1. Write flag character and repeated pixel.  Strip pesky newline at end.
 			// I had to add one the second part of the substr function because it was also striping the last char of the string.
-			pixf_cmpr << "00000000 " << pix_list[i].substr(0, (pix_list[i].find_last_not_of(whitespace) + 1));
+			// I also changed the "00000000" to "flag" to reduce confusing it with a hexidecimal character
+			pixf_cmpr << "flag " << pix_list[i].substr(0, (pix_list[i].find_last_not_of(whitespace) + 1));
 			// 5. (Explain loop below.)
 			//While we haven't reached the end of vector and the current and next item in the vector are the same, increment the counter.
 			//Then move to the next element of the vector and repeat.
