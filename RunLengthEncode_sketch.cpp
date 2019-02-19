@@ -41,6 +41,7 @@ int main()
 		{
 			// Pixels same.
 			// 1. Write flag character and repeated pixel.  Strip pesky newline at end.
+			// I had to add one the second part of the substr function because it was also striping the last char of the string.
 			pixf_cmpr << "00000000 " << pix_list[i].substr(0, (pix_list[i].find_last_not_of(whitespace) + 1));
 			// 5. (Explain loop below.)
 			//While we haven't reached the end of vector and the current and next item in the vector are the same, increment the counter.
